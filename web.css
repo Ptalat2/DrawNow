@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: cornsilk;
+    font-family: 'Roboto', sans-serif;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+    
+}
+
+canvas {
+    position: relative;
+}
+
+.tool-container{
+    position: relative;
+    top:10px;
+    left:5px;
+    display: flex;
+    width:880px;
+    padding:1rem;
+    background-color:aquamarine;
+   
+}
+
+img {
+    display: none;
+}
+
+#file{
+    width:240px;
+}
+
+
+
+.tool-container> * {
+    cursor: pointer;
+}
+
+.tool-container button  {
+    background-color:red;
+    color:white;
+}
+
+button:hover {
+    background-color:white;
+    color:black;
+}
+
+
+.tool-container > #download {
+    position: relative;
+    left:350px;
+}
+
+.tool-container > #clear {
+    position: relative;
+    left:380px;
+}
+
+.tool-container #color {
+    position: relative;
+    left:100px;
+    top:2px;
+}
+
+.tool-container #update {
+    position: relative;
+    left:150px;
+}
+
+.tool-container #dec {
+    position: relative;
+    left:-10px;
+}
+
+.tool-container #inc {
+    position: relative;
+    left:10px;
+}
+.tool-container #save {
+    position: relative;
+    left:100px;
+}
+
+.tool-container #file {
+    position: relative;
+    left:150px;
+}
+
+
+#a {
+    color:rgb(48, 10, 102);
+    animation-name: color;
+    animation: -color .3s alternate infinite;
+}
+
+@keyframes -color {
+    from {color:rgb(110, 7, 255); background-color:rgb(13, 190, 128)}
+    to {color: rgb(137, 0, 43);background-Color:white;}
+}
+
+
+#swift {
+    background-color:black;
+    color:aquamarine;
+    border: red;
+    }
+
+
+
+  .overlay {
+    display:none;
+    height: 305px;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    left: 1035px;
+    background-color: rgb(67,70,75);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    color:limegreen;
+  }
+
+
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  
+  .overlay-content >a {
+    color:limegreen;
+    position: relative;
+    padding:none;
+    background-color:white;
+    top:-20px;
+
+  }
+
+  
+  .overlay a:hover, .overlay a:focus {
+    color: limegreen;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: -20px;
+    /* right: 45px; */
+    font-size: 30px;
+  }
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
